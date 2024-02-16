@@ -18,6 +18,7 @@ const daerahcodesplitter = (c) => {
 const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
 const createFolder = (config, date = dayjs()) => {
     const fulldate = date.format("DD-MM-YYYY hh:mm:ss")
     const [tgl, wkt] = fulldate.split(" ")
