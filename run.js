@@ -1,11 +1,12 @@
 const dayjs = require('dayjs');
-const { daerahcodesplitter, sleep } = require('./utils');
+const { sleep } = require('./utils');
 const { mainData } = require('./take-data');
 const { mainWilayah } = require('./take-wilayah');
+const tps = require("./tps.json")
 
 const run = async () => {
     let d = dayjs()
-    await Promise.all([mainData(d), mainWilayah(d)])
+    await Promise.all([mainData(tps, d), mainWilayah(d)])
 }
 const main = async () => {
     const asec = 1000

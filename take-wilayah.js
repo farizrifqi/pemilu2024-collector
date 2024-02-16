@@ -44,7 +44,6 @@ const downloadFile = async (save_dir, filename, endpoint) => {
 const mainWilayah = async (date = dayjs()) => {
     const dir = createFolder(config, date)
     for (const r of requestRoute) {
-        console.log(r)
         await downloadFile(dir, `${r.name}.json`, r.endpoint)
     }
 }
